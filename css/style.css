@@ -109,3 +109,38 @@ p,h2,h3{text-wrap:balance}
   .btn{padding-inline:1.2rem}.count b{font-size:1.9rem}.count span{font-size:.85rem}
 }
 @media (max-height:640px){.env-text .ar{display:none}.envelope{width:min(62vw,260px)}}
+
+/* ===== Navy · Warm Beige · Soft Gold ===== */
+:root{
+  --navy:#1F2A44; --navy-soft:#2E3D63; --navy-deep:#141D33;
+  --beige:#E8DCC8; --paper:#F4EEE0;
+  --gold:#C6A75E; --gold-light:#DCC48A;
+  --gold-deep:#7A6228;          /* الذهبي الأغمق للنصوص على البيج */
+  --ivory:#E8DCC8;              /* خلفية الصفحة */
+  --emerald:#1F2A44;            /* كل ما كان أخضر صار كحلياً */
+  --ink:#1F2A44;
+}
+
+body{
+  background-image:
+    radial-gradient(rgba(198,167,94,.16) 1px,transparent 1px),
+    linear-gradient(180deg,#F1E8D8,#E8DCC8 55%,#E0D2B8);
+  background-size:5px 5px,auto;
+}
+.card{background:rgba(244,238,224,.92);box-shadow:0 10px 30px rgba(31,42,68,.08)}
+
+/* الظرف */
+.envelope-stage{background:radial-gradient(circle at 50% 40%,#F4EEE0,#E8DCC8)}
+.env-back{background:var(--navy-deep)}
+.env-letter{background:var(--paper)}
+.env-flap{background:linear-gradient(var(--navy-soft),var(--navy))}
+.env-front{
+  background:
+    linear-gradient(135deg,transparent 49.6%,var(--gold) 50%,var(--navy) 50.4%) left/50% 100% no-repeat,
+    linear-gradient(225deg,transparent 49.6%,var(--gold) 50%,var(--navy) 50.4%) right/50% 100% no-repeat;
+}
+.env-seal{background:radial-gradient(circle at 35% 30%,var(--gold-light),#B8974A);color:var(--navy)}
+
+/* شريط العدّاد */
+.band{background:linear-gradient(180deg,var(--navy-soft),var(--navy));color:var(--beige)}
+.count b,.arrived .en{color:var(--gold-light)}
