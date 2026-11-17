@@ -12,12 +12,18 @@ body.is-sealed{overflow:hidden}
 .soft{opacity:.85}
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 
-/* Buttons */
-.btn{display:inline-flex;flex-direction:column;align-items:center;gap:.1rem;margin-top:1.4rem;padding:.8rem 2rem;border:1px solid var(--gold);background:var(--emerald);color:var(--ivory);text-decoration:none;cursor:pointer;font:inherit;border-radius:2px;outline:1px solid rgba(198,161,91,.5);outline-offset:4px;transition:background .3s,color .3s,transform .3s}
-.btn .en{font-size:1rem;letter-spacing:.12em;color:#E0C486}
-@media (hover:hover){.btn:hover{background:var(--gold);color:var(--emerald);transform:translateY(-2px)}.btn:hover .en{color:var(--emerald)}}
-.btn:active{background:var(--gold);color:var(--emerald)}.btn:active .en{color:var(--emerald)}
 
+.btn .en{font-size:1rem;letter-spacing:.12em;color:#FFFFFF}
+
+
+@media (hover:hover){
+  .btn:hover{background:var(--gold);color:#FFFFFF;transform:translateY(-2px)}
+  .btn:hover .en{color:#FFFFFF}
+}
+
+
+.btn:active{background:var(--gold);color:#FFFFFF;transform:translateY(0) scale(.98)}
+.btn:active .en{color:#FFFFFF}
 /* Envelope */
 .envelope-stage{position:fixed;inset:0;z-index:20;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2rem;padding:1.5rem;
 background:radial-gradient(circle at 50% 40%,#F8F4EA,#E9DFCE);text-align:center;transition:opacity 1s ease,visibility 1s}
