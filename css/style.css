@@ -109,3 +109,45 @@ p,h2,h3{text-wrap:balance}
   .btn{padding-inline:1.2rem}.count b{font-size:1.9rem}.count span{font-size:.85rem}
 }
 @media (max-height:640px){.env-text .ar{display:none}.envelope{width:min(62vw,260px)}}
+
+/* ===== Off-white & Gold theme ===== */
+:root{
+  --ivory:#FBF8F1;      /* أوف وايت */
+  --beige:#F1E9D8;
+  --gold:#C6A15B;       /* للإطارات والزخارف */
+  --gold-deep:#8A6A2B;  /* للنصوص الذهبية */
+  --emerald:#8A6A2B;    /* كل ما كان أخضر صار ذهبياً غامقاً */
+  --ink:#3A352A;
+}
+
+/* النصوص */
+.verse{color:var(--ink)}
+.card{background:rgba(251,248,241,.92);box-shadow:0 10px 30px rgba(138,106,43,.08)}
+
+/* الأزرار: إطار ذهبي، وتعبئة عند اللمس */
+.btn{background:transparent;color:var(--gold-deep);border-color:var(--gold)}
+.btn .en{color:var(--gold-deep)}
+.btn:active{background:var(--gold-deep);color:var(--ivory)}
+.btn:active .en{color:var(--ivory)}
+@media (hover:hover){
+  .btn:hover{background:var(--gold-deep);color:var(--ivory)}
+  .btn:hover .en{color:var(--ivory)}
+}
+
+/* الظرف */
+.env-back{background:#D9C79C}
+.env-flap{background:linear-gradient(#F8F1DF,#EADCB9)}
+.env-front{
+  background:
+    linear-gradient(135deg,transparent 49.6%,var(--gold) 50%,#EFE4C8 50.4%) left/50% 100% no-repeat,
+    linear-gradient(225deg,transparent 49.6%,var(--gold) 50%,#EFE4C8 50.4%) right/50% 100% no-repeat;
+}
+.env-seal{color:var(--ink)}
+
+/* شريط العدّاد */
+.band{background:var(--beige);color:var(--ink)}
+.count b,.arrived .en{color:var(--gold-deep)}
+
+/* زر الموسيقى */
+.music{background:var(--ivory);color:var(--gold-deep)}
+.music-bars i{background:var(--gold-deep)}
