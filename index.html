@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A &amp; S | Wedding Invitation</title>
+<meta name="description" content="With hearts full of joy, you are invited to the wedding of A &amp; S — Monday, November 23, 2026, Zuleikha Hall. بكل الحب والفرح ندعوكم لحضور حفل زفاف A &amp; S.">
+<meta name="theme-color" content="#F8F4EA">
+<meta property="og:type" content="website">
+<meta property="og:title" content="A &amp; S | Wedding Invitation">
+<meta property="og:description" content="A Beautiful Beginning — Monday, November 23, 2026 · Zuleikha Hall. You are warmly invited.">
+<meta property="og:image" content="assets/images/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="is-sealed">
+<canvas id="particles" aria-hidden="true"></canvas>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E0C486"/><stop offset=".5" stop-color="#C6A15B"/><stop offset="1" stop-color="#A9843F"/>
+    </linearGradient>
+    <symbol id="sprig" viewBox="0 0 200 40" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round">
+      <path d="M10 20 H90 M110 20 H190"/>
+      <path d="M100 8 C94 14 94 26 100 32 C106 26 106 14 100 8Z"/>
+      <path d="M86 20 C80 12 70 12 64 18 C72 24 80 24 86 20Z M114 20 C120 12 130 12 136 18 C128 24 120 24 114 20Z"/>
+      <circle cx="100" cy="20" r="1.6" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3.5" y="5" width="17" height="15" rx="1.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.5 2"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.3"/></symbol>
+    <symbol id="monogram" viewBox="0 0 240 200" fill="none" stroke="url(#gold)" stroke-linecap="round">
+      <ellipse cx="120" cy="100" rx="112" ry="92" stroke-width=".8"/>
+      <ellipse cx="120" cy="100" rx="104" ry="84" stroke-width=".4"/>
+      <text x="92" y="136" text-anchor="middle" font-family="Playfair Display, serif" font-size="108" fill="url(#gold)" stroke="none" opacity=".95">A</text>
+      <text x="152" y="128" text-anchor="middle" font-family="Cormorant Garamond, serif" font-style="italic" font-size="104" fill="#123D32" stroke="url(#gold)" stroke-width="1.4">S</text>
+      <path d="M72 148 C100 160 140 160 168 148" stroke-width=".9"/>
+      <path d="M52 40 C70 24 90 24 104 34 M188 40 C170 24 150 24 136 34" stroke-width=".8"/>
+      <circle cx="120" cy="30" r="2.4" fill="url(#gold)" stroke="none"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- Envelope -->
+<section class="envelope-stage" id="stage" aria-label="Invitation envelope">
+  <div class="envelope" id="envelope">
+    <div class="env-back"></div>
+    <div class="env-letter"><svg class="mono sm"><use href="#monogram"/></svg></div>
+    <div class="env-front"></div>
+    <div class="env-flap"></div>
+    <div class="env-seal"><span>A&amp;S</span></div>
+  </div>
+  <div class="env-text">
+    <p class="en serif-en">A Beautiful Beginning</p>
+    <p class="ar">بعض اللحظات لا تتكرر... وبعض البدايات تستحق أن تُحتفل بها.</p>
+    <button class="btn" id="openBtn" type="button"><span class="en">Open Your Invitation</span><span class="ar">افتح دعوتك</span></button>
+  </div>
+</section>
+
+<button class="music" id="musicBtn" type="button" aria-pressed="false" aria-label="تشغيل الموسيقى / Play music" title="الموسيقى / Music">
+  <span class="music-on">♪</span><span class="music-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+</button>
+
+<main class="invite" id="invite" aria-hidden="true">
+  <article class="card hero">
+    <svg class="corner tl"><use href="#sprig"/></svg>
+    <p class="verse">﴿وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنْفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ﴾</p>
+    <svg class="divider"><use href="#sprig"/></svg>
+    <p class="en serif-en soft">With hearts full of joy and gratitude...</p>
+    <p class="ar soft">بكل الحب والفرح، وبقلوب يملؤها الأمل والسعادة...</p>
+    <p class="host-ar">يتشرف السيد أسامة الأحمد بدعوتكم لحضور حفل زفاف</p>
+    <p class="en serif-en soft">Mr. Osama Al-Ahmad<br>requests the pleasure of your company at the wedding of</p>
+    <svg class="mono big" role="img" aria-label="A and S monogram"><use href="#monogram"/></svg>
+    <p class="en serif-en tag">One Night, One Beginning, Forever Together.</p>
+    <p class="ar tag-ar">ليلة من العمر... وبداية حكاية جديدة.</p>
+  </article>
+
+  <section class="card details" aria-labelledby="dTitle">
+    <h2 id="dTitle" class="title"><span class="en">Wedding Celebration</span><span class="ar">حفل الزفاف</span></h2>
+    <h3 class="venue"><span class="ar">صالة زليخة</span><span class="en">Zuleikha Hall</span></h3>
+    <ul class="facts">
+      <li><svg><use href="#i-cal"/></svg><b class="ar">الاثنين 23 نوفمبر 2026</b><span class="en">Monday, November 23, 2026</span></li>
+      <li><svg><use href="#i-clock"/></svg><b class="ar">الساعة السابعة مساءً</b><span class="en">7:00 PM</span></li>
+      <li><svg><use href="#i-pin"/></svg><b class="ar">السيد أسامة الأحمد</b><span class="en">Hosted by Mr. Osama Al-Ahmad</span></li>
+    </ul>
+  </section>
+
+  <section class="band" aria-label="Countdown">
+    <div class="count" id="countdown" role="timer" aria-live="off">
+      <div><b id="cd-d">00</b><span><i class="ar">الأيام</i><i class="en">Days</i></span></div>
+      <div><b id="cd-h">00</b><span><i class="ar">الساعات</i><i class="en">Hours</i></span></div>
+      <div><b id="cd-m">00</b><span><i class="ar">الدقائق</i><i class="en">Minutes</i></span></div>
+      <div><b id="cd-s">00</b><span><i class="ar">الثواني</i><i class="en">Seconds</i></span></div>
+    </div>
+    <div class="arrived" id="arrived" hidden>
+      <p class="en serif-en">The day has finally arrived. Welcome to our celebration!</p>
+      <p class="ar">اليوم اكتملت الحكاية... أهلاً بكم في فرحتنا.</p>
+    </div>
+  </section>
+
+  <section class="card place" aria-labelledby="pTitle">
+    <h2 id="pTitle" class="title"><span class="ar">مكان لقائنا</span><span class="en">Where We Celebrate</span></h2>
+    <svg class="map" viewBox="0 0 320 150" fill="none" stroke="#C6A15B" stroke-width=".8" aria-hidden="true">
+      <rect x=".5" y=".5" width="319" height="149" fill="#E9DFCE" stroke="#C6A15B"/>
+      <path d="M0 40 L320 70 M0 110 L320 90 M90 0 L120 150 M220 0 L190 150 M0 75 L320 55" opacity=".55"/>
+      <path d="M140 0 C150 50 170 100 160 150" stroke-width="3" opacity=".3"/>
+      <circle cx="160" cy="72" r="22" opacity=".4"/><circle cx="160" cy="72" r="12" opacity=".6"/>
+      <path d="M160 82s-9-8-9-15a9 9 0 0 1 18 0c0 7-9 15-9 15Z" fill="#123D32" stroke="#C6A15B"/><circle cx="160" cy="67" r="3" fill="#C6A15B" stroke="none"/>
+    </svg>
+    <p class="venue sm"><span class="ar">صالة زليخة</span><span class="en">Zuleikha Hall</span></p>
+    <p class="ar">يسعدنا أن نلتقي بكم في أجمل ليلة.</p>
+    <p class="en serif-en soft">We can't wait to welcome you.</p>
+    <a class="btn" href="https://www.google.com/maps?q=33.457639,36.185778" target="_blank" rel="noopener"><span class="ar">افتح الموقع على خرائط Google</span><span class="en">Get Directions</span></a>
+  </section>
+
+  <section class="closing" aria-label="Closing message">
+    <svg class="divider"><use href="#sprig"/></svg>
+    <p class="en serif-en big-quote">Your presence will make our happiness even greater, and sharing this special night with you will make it unforgettable.</p>
+    <p class="ar big-quote-ar">وجودكم يضيف لفرحتنا فرحة، ومشاركتكم تجعل هذه الليلة أجمل.</p>
+    <svg class="mono mid" role="img" aria-label="A and S monogram"><use href="#monogram"/></svg>
+    <p class="en serif-en with">With Love</p>
+    <p class="en date">November 23, 2026</p>
+    <svg class="divider"><use href="#sprig"/></svg>
+  </section>
+</main>
+
+<script src="js/countdown.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
