@@ -109,9 +109,9 @@
       if (p.y > H + 10) ps[i] = mk(false);
       ctx.globalAlpha = p.o;
       if (p.petal) {
-        ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.a); ctx.fillStyle = '#E9DFCE'; ctx.strokeStyle = '#C6A15B'; ctx.lineWidth = .5;
+        ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.a); ctx.fillStyle = '#E9DFCE'; ctx.strokeStyle = '#C6A75E'; ctx.lineWidth = .5;
         ctx.beginPath(); ctx.ellipse(0, 0, p.r, p.r * .55, 0, 0, 6.28); ctx.fill(); ctx.stroke(); ctx.restore();
-      } else { ctx.fillStyle = '#C6A15B'; ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.28); ctx.fill(); }
+      } else { ctx.fillStyle = '#C6A75E'; ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.28); ctx.fill(); }
     });
     requestAnimationFrame(draw);
   }
