@@ -13,15 +13,13 @@ body.is-sealed{overflow:hidden}
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 
 
+/* Buttons */
+.btn{display:inline-flex;flex-direction:column;align-items:center;gap:.1rem;margin-top:1.4rem;padding:.8rem 2rem;border:1px solid var(--gold);background:var(--emerald);color:var(--ivory);text-decoration:none;cursor:pointer;font:inherit;border-radius:2px;outline:1px solid rgba(198,161,91,.5);outline-offset:4px;transition:background .3s,color .3s,transform .3s}
 .btn .en{font-size:1rem;letter-spacing:.12em;color:#FFFFFF}
-
-
 @media (hover:hover){
   .btn:hover{background:var(--gold);color:#FFFFFF;transform:translateY(-2px)}
   .btn:hover .en{color:#FFFFFF}
 }
-
-
 .btn:active{background:var(--gold);color:#FFFFFF;transform:translateY(0) scale(.98)}
 .btn:active .en{color:#FFFFFF}
 /* Envelope */
